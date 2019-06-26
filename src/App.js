@@ -31,7 +31,7 @@ class App extends Component {
       <div className="App">
         <h1>ravenous</h1>
           <SearchBar searchYelp={this.searchYelp}/>
-          { this.state.isLoading ? <p>Loading...</p> : <BusinessList businesses={this.state.businesses} /> }
+          <BusinessList isLoading={this.state.isLoading} businesses={this.state.businesses} />
 
       </div>
     );

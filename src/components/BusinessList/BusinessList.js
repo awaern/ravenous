@@ -7,7 +7,9 @@ class BusinessList extends React.Component {
 
     let list;
 
-    if (this.props.businesses) {
+    if (this.props.isLoading) {
+      list = <p>Loading...</p>
+    } else if (this.props.businesses) {
       list = this.props.businesses.map((business, index) => {
         return <Business key={business.id} business={business}/>
       });
